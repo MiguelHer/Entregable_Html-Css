@@ -45,9 +45,9 @@
                 <article id="main-col">
                     <form action="https://formspree.io/f/mqkwaerb" method="POST" target="_blank" rel="noopener noreferrer">
                         <label for="id">Número de Identificación <span>*</span></label>
-                        <input type="number" id="id" name="id" maxlength="10" placeholder="Ingresa tu Número de Identificación" required>
+                        <input type="text" id="id" name="id" pattern="\w{6,9}[0-9]" placeholder="Ingresa tu Número de Identificación" title="Ingresa solo numeros" required>
                         <label for="phone">Celular <span>*</span></label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ingresa tu Número de Celular con  el formato: xxx-xxx-xxxx" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ingresa tu Número de Celular con  el formato: xxx-xxx-xxxx" title="Ingresa tu numero sin el prefijo" required>
                         <label for="area">Área/operación <span>*</span></label>
                         <select id="area" name="area_operación" required>
                             <option></option>
@@ -71,7 +71,7 @@
                         <input type="email" id="email" name="Email" placeholder="Ingresa tu Email" required>
                         <label for="cargo">Cargo <span>*</span></label>
                         <input type="text" id="cargo" name="Cargo" placeholder="Cargo" required>
-                        <label for="horario">Horario en el que podemos contactar <span>*</span>
+                        <label for="horario">Horario en el que podemos contactar <span>*</span></label>
                         <input id="horario" type="time" name="horario" min="7:00" max="18:00" required>
                         <input type="submit" value="Enviar">
                         <input type="reset" value="Limpiar">
